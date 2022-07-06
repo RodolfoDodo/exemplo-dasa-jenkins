@@ -1,5 +1,5 @@
 Feature('login');
 
 Scenario('test something', ({ I }) => {
-    I.amOnPage('/')
+    I.amOnPage('http://www.google.com')
 });

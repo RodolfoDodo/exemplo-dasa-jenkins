@@ -22,7 +22,6 @@ jobs:
 
       - name: Install dependecies
         run: npm install
-        run: npm i @wdio/selenium-standalone-service --save-dev
 
       - name: Setup Playwright    
         uses: microsoft/playwright-github-action@v1

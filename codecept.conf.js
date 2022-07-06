@@ -12,7 +12,7 @@ exports.config = {
   output: './output',
   helpers: {
     WebDriver: {
-      url: 'https://ge.globo.com/',
+      url: 'http://www.google.com',
       browser: 'chrome'
     }
   },

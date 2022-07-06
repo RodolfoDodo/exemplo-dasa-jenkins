@@ -13,7 +13,13 @@ exports.config = {
   helpers: {
     WebDriver: {
       url: 'http://www.google.com',
-      browser: 'chrome'
+      browser: 'chrome',
+      waitForTimeout: 5000,
+      desiredCapabilities: {
+        chromeOptions: {
+          args: ["--headless"]
+        }
+      }
     }
   },
   include: {

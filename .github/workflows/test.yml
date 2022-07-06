@@ -19,15 +19,15 @@ jobs:
         uses: actions/setup-node@v2.2.0
         with:
           node-version: ${{ matrix.node-version }}
+      
+      - name: Setup WedriverIO    
+        uses: npx codeceptjs init 
 
       - name: Install dependecies
         run: npm install
         run: npm install codeceptjs webdriverio --save 
         run: npm i @wdio/selenium-standalone-service --save-dev
-
-      - name: Setup WedriverIO    
-        uses: npx codeceptjs init 
-
+        
       - name: Run CodeceptJS tests
         run: npx codeceptjs run
       

@@ -5,7 +5,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
- 
+  schedule:
+    - cron: '0 9,11,15,18 * * 1,2,3,4,5'
 
 jobs:
   e2e-tests:
@@ -20,14 +21,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Setup WedriverIO    
-        uses: npx codeceptjs init 
-
       - name: Install dependecies
         run: npm install
-        run: npm install codeceptjs webdriverio --save 
         run: npm i @wdio/selenium-standalone-service --save-dev
-        
 
       - name: Setup Playwright    
         uses: microsoft/playwright-github-action@v1

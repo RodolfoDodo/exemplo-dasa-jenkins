@@ -1,6 +1,6 @@
 Feature('login');
 
-Scenario('test something', ({ I }) => {
+Scenario('Acessop ao google', ({ I }) => {
     I.amOnPage('http://www.google.com')
-    I.seeInTitle('Google 01')
+    I.seeInTitle('Google')
 });
